@@ -5,6 +5,14 @@ public class Food extends Pet implements FoodBehavior {
     protected int foodSaturation;
     protected int foodEnergy;
 
+    public Food(String foodName, String foodDescription, int foodPrice, int foodSaturation, int foodEnergy) {
+        this.foodName = foodName;
+        this.foodDescription = foodDescription;
+        this.foodPrice = foodPrice;
+        this.foodSaturation = foodSaturation;
+        this.foodEnergy = foodEnergy;
+    }
+
     public int eatFoodSat(){
         return saturation = saturation+foodSaturation;
     }
@@ -23,4 +31,6 @@ public class Food extends Pet implements FoodBehavior {
         useMoney();
         return 0;
     }
+
+    Food steak = new Food("Steak", "Yummy", 50, 50, 100);
 }
