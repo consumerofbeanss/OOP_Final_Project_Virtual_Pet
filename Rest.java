@@ -1,5 +1,5 @@
 public class Rest extends Pet implements RestBehavior{
-    protected int sleepEnergy;
+    public int sleepEnergy;
 
     public Rest() {
         this.sleepEnergy = 200;

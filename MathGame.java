@@ -1,20 +1,14 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class MathGame extends Games implements GameBehavior{
-    protected int num1;
-    protected int num2;
-    protected int opr;
-    protected int ans;
-
-
+public class MathGame extends Games{
+    public int num1;
+    public int num2;
+    public int opr;
+    public int ans;
 
     public MathGame(String gameName, boolean gameWin, int gameEnergy, int gameFun, int gameMoney) {
         super(gameName, gameWin, gameEnergy, gameFun, gameMoney);
-        this.gameName = "Math Game";
-        this.gameEnergy = 5;
-        this.gameFun = 10;
-        this.gameMoney = 10;
     }
 
 
@@ -40,14 +34,14 @@ public class MathGame extends Games implements GameBehavior{
                 ans = num1 * num2;
             }
 
-            Scanner scanner = new Scanner(System.in);
+            Scanner math = new Scanner(System.in);
             System.out.println("What is the answer?");
-            Integer answer = scanner.nextInt();
+            Integer answer = math.nextInt();
             if (answer.equals(ans)){
                 System.out.println("Correct!");
                 useEnergy();
                 addFun();
-                getMoney();
+                earnMoney();
             }
             else{
                 System.out.println("Wrong!");
@@ -55,7 +49,7 @@ public class MathGame extends Games implements GameBehavior{
             }
 
             System.out.println("Again?");
-            String answer2 = scanner.nextLine();
+            String answer2 = math.nextLine();
             if (answer2.equals("Yes")){
                 gameWin = false;
             }

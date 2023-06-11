@@ -1,11 +1,12 @@
 import javax.xml.namespace.QName;
+import java.util.Scanner;
 
 public class Pet {
-    protected String name;
-    protected int saturation;
-    protected int fun;
-    protected int energy;
-    protected int money;
+    public String name;
+    public int saturation;
+    public int fun;
+    public int energy;
+    public int money;
 
     public Pet(){
         this.saturation = 100;
@@ -19,6 +20,46 @@ public class Pet {
         this.saturation = saturation;
         this.fun = fun;
         this.energy = energy;
+        this.money = money;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSaturation() {
+        return saturation;
+    }
+
+    public void setSaturation(int saturation) {
+        this.saturation = saturation;
+    }
+
+    public int getFun() {
+        return fun;
+    }
+
+    public void setFun(int fun) {
+        this.fun = fun;
+    }
+
+    public int getEnergy() {
+        return energy;
+    }
+
+    public void setEnergy(int energy) {
+        this.energy = energy;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
         this.money = money;
     }
 }

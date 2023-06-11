@@ -1,9 +1,12 @@
-public abstract class Games extends Pet implements GameBehavior{
-    protected String gameName;
-    protected boolean gameWin;
-    protected int gameEnergy;
-    protected int gameFun;
-    protected int gameMoney;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Games extends Pet implements GameBehavior{
+    public String gameName;
+    public boolean gameWin;
+    public int gameEnergy;
+    public int gameFun;
+    public int gameMoney;
 
     public Games(String gameName, boolean gameWin, int gameEnergy, int gameFun, int gameMoney) {
         this.gameName = gameName;
@@ -16,12 +19,12 @@ public abstract class Games extends Pet implements GameBehavior{
     public int useEnergy(){
         return energy = energy-gameEnergy;
     }
-
     public int addFun(){
         return fun = fun+gameFun;
     }
-    public int getMoney(){
+    public int earnMoney(){
         return money = money+gameMoney;
     }
+
 
 }
