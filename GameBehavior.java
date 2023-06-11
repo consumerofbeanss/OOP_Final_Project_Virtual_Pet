@@ -1,6 +1,7 @@
 public interface GameBehavior {
-    public int useEnergy();
-    public int addFun();
-    public int earnMoney();
+    public void useEnergy();
+    public void addFun();
+    public void reduceFun();
+    public void earnMoney();
 
 }

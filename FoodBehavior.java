@@ -1,6 +1,6 @@
 public interface FoodBehavior {
-    public int eatFoodSat();
-    public int eatFoodEn();
-    public int useMoney();
-    public int eatFood();
+    public void eatFoodSat();
+    public void eatFoodEn();
+    public void useMoney();
+    public void eatFood();
 }

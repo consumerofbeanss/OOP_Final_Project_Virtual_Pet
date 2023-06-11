@@ -1,29 +1,32 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Games extends Pet implements GameBehavior{
     public String gameName;
     public boolean gameWin;
     public int gameEnergy;
     public int gameFun;
     public int gameMoney;
+    private Pet pet;
 
-    public Games(String gameName, boolean gameWin, int gameEnergy, int gameFun, int gameMoney) {
+    public Games(String gameName, boolean gameWin, int gameEnergy, int gameFun, int gameMoney, Pet pet) {
         this.gameName = gameName;
         this.gameWin = gameWin;
         this.gameEnergy = gameEnergy;
         this.gameFun = gameFun;
         this.gameMoney = gameMoney;
+        this.pet = pet;
     }
 
-    public int useEnergy(){
-        return energy = energy-gameEnergy;
+    public void useEnergy(){
+        pet.petEnergy -= gameEnergy;
     }
-    public int addFun(){
-        return fun = fun+gameFun;
+    public void addFun(){
+        pet.petFun += gameFun;
     }
-    public int earnMoney(){
-        return money = money+gameMoney;
+    public void reduceFun(){
+        pet.petFun -= gameFun;
+    }
+
+    public void earnMoney(){
+        pet.petMoney += gameMoney;
     }
 
 
