@@ -1,5 +1,3 @@
-import javax.xml.namespace.QName;
-import java.util.Scanner;
 
 public class Pet {
     public String petName;
@@ -22,5 +20,13 @@ public class Pet {
         this.petFun = petFun;
         this.petEnergy = petEnergy;
         this.petMoney = petMoney;
+    }
+
+    public void updatePet(Pet petNew) {
+        this.petName = petNew.petName;
+        this.petSaturation = petNew.petSaturation;
+        this.petFun = petNew.petFun;
+        this.petEnergy = petNew.petEnergy;
+        this.petMoney = petNew.petMoney;
     }
 }
