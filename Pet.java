@@ -23,6 +23,4 @@ public class Pet {
         this.petEnergy = petEnergy;
         this.petMoney = petMoney;
     }
-
-
 }

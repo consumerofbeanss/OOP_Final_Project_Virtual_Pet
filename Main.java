@@ -11,7 +11,7 @@ public class Main {
         Food water = new Food("Water", "Splashy", 10, 20, 25, pet);
         Food candy = new Food("Candy", "Sweet", 10, 10, 10, pet);
 
-        MathGame math = new MathGame("Math Game", false, 5, 10, 10, pet);
+        MathGame math = new MathGame("Math Game", false,5,5, 10, 10, pet);
 
         System.out.println("What is your pet's name?");
         pet.petName = s.nextLine();
@@ -76,9 +76,11 @@ public class Main {
                     break;
 
                 case "4":
+                    SaveLoad.savePet(pet);
                     break;
 
                 case "5":
+                    SaveLoad.loadPet();
                     break;
 
                 case "6":

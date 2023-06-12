@@ -7,8 +7,8 @@ public class MathGame extends Games{
     public int opr;
     public int ans;
 
-    public MathGame(String gameName, boolean gameWin, int gameEnergy, int gameFun, int gameMoney, Pet pet) {
-        super(gameName, gameWin, gameEnergy, gameFun, gameMoney, pet);
+    public MathGame(String gameName, boolean gameWin, int gameSaturation, int gameEnergy, int gameFun, int gameMoney, Pet pet) {
+        super(gameName, gameWin, gameSaturation, gameEnergy, gameFun, gameMoney, pet);
     }
 
 
@@ -39,6 +39,7 @@ public class MathGame extends Games{
                 Integer answer = math.nextInt();
                 if (answer.equals(ans)) {
                     System.out.println("Correct!");
+                    useSaturation();
                     useEnergy();
                     addFun();
                     earnMoney();
