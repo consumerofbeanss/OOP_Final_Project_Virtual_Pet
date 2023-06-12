@@ -43,13 +43,13 @@ public class MathGame extends Games{
                     addFun();
                     earnMoney();
                     gameWin = true;
+                    Art.happy();
                 } else {
                     System.out.println("Wrong!");
                     useEnergy();
                     reduceFun();
-                    System.out.println("Again?");
-                    gameWin = false;
-
+                    gameWin = true;
+                    Art.sad();
                 }
             }
         }

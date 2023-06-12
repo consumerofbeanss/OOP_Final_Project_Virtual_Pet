@@ -34,6 +34,7 @@ public class Food extends Pet implements FoodBehavior {
             eatFoodSat();
             eatFoodEn();
             useMoney();
+            Art.eat();
             System.out.println("You fed " + pet.petName + " some " + foodDescription + " " + foodName + "." );
         }
         else{
