@@ -8,10 +8,10 @@ public class Pet {
 
     public Pet(){
         this.petName = "Steve";
-        this.petSaturation = 100;
-        this.petFun = 75;
-        this.petEnergy = 100;
-        this.petMoney = 2000;
+        this.petSaturation = 50;
+        this.petFun = 60;
+        this.petEnergy = 40;
+        this.petMoney = 500;
     }
 
     public Pet(String petName, int petSaturation, int petFun, int petEnergy, int petMoney) {
