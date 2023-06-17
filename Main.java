@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         boolean loop = true;
-        Pet steve = new Pet("Steve", 50, 60, 40, 500);
+        Pet steve = new Pet();
         Pet steveTemp = null;
         Scanner s = new Scanner(System.in);
         
@@ -17,10 +17,10 @@ public class Main {
         System.out.println("What is your pet's name?");
         steve.petName = s.nextLine();
 
-        System.out.println("Java Virtual Pet");
+        System.out.println("Welcome to Java Virtual Pet");
 
         while (loop) {
-            System.out.println("****************************************************************");
+            System.out.println("\n\n\n****************************************************************");
             System.out.println(steve.petName);
             if (steve.petFun>80 && steve.petFun<=100){
                 Art.happy();
@@ -39,7 +39,7 @@ public class Main {
 
             switch (choice) {
                 case "1":
-                    System.out.println("What shall you feed pet?");
+                    System.out.println("What shall you feed " + steve.petName +  "?");
                     System.out.println("1. Steak\n2. Fries\n3. Water\n4. Candy");
                     String foodChoice = s.nextLine();
                     switch (foodChoice) {
