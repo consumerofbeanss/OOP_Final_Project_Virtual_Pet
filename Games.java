@@ -8,6 +8,7 @@ public class Games extends Pet implements GameBehavior{
     private Pet pet;
 
     public Games(String gameName, boolean gameWin, int gameSaturation, int gameEnergy, int gameFun, int gameMoney, Pet pet) {
+        //Constructor with parameters
         this.gameName = gameName;
         this.gameWin = gameWin;
         this.gameSaturation = gameSaturation;
@@ -18,19 +19,24 @@ public class Games extends Pet implements GameBehavior{
     }
 
     public void useSaturation(){
+        //Reduces the pet's saturation
         pet.petSaturation -= gameSaturation;
     }
     public void useEnergy(){
+        //Reduces the pet's energy
         pet.petEnergy -= gameEnergy;
     }
     public void addFun(){
+        //Adds the pet's fun
         pet.petFun += gameFun;
     }
     public void reduceFun(){
+        //Reduces the pet's fun
         pet.petFun -= gameFun;
     }
 
     public void earnMoney(){
+        //Increase money
         pet.petMoney += gameMoney;
     }
 

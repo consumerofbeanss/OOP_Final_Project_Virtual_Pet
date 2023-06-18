@@ -7,6 +7,7 @@ public class Food extends Pet implements FoodBehavior {
     private Pet pet;
 
     public Food(String foodName, String foodDescription, int foodPrice, int foodSaturation, int foodEnergy, Pet pet) {
+        //Constructor with parameters
         this.foodName = foodName;
         this.foodDescription = foodDescription;
         this.foodPrice = foodPrice;
@@ -18,18 +19,22 @@ public class Food extends Pet implements FoodBehavior {
 
 
     public void eatFoodSat(){
+        //Adds the pet's saturation
         pet.petSaturation += foodSaturation;
     }
 
     public void eatFoodEn(){
+        //Adds the pet's energy
         pet.petEnergy += foodEnergy;
     }
 
     public void useMoney(){
+        //Reduces money
         pet.petMoney -= foodPrice;
     }
 
     public void eatFood(){
+        //Method that runs all functions above under the condition that the user has more money than the price of the food they are purchasing
         if (pet.petMoney>=foodPrice){
             eatFoodSat();
             eatFoodEn();

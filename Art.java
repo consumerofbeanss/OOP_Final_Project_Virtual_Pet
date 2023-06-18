@@ -1,4 +1,5 @@
 public class Art{
+    //Sprites for the program
     public static void happy(){
         System.out.println("          ___________          ");
         System.out.println("         /           \\         ");
